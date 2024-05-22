@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import "./variables";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 75px 150px 90px 150px;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.underline {
+    width: 100px;
+    height: 4px;
+    background: $gray-accent;
+    margin-bottom: 30px !important;
+    margin: 0 auto;
+}
+
+@import "./header";
+@import "./about";
+@import "./projects";
+@import "./gridtest";
+@import "./footer";

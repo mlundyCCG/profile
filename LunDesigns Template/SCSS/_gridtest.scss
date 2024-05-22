@@ -1,0 +1,414 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    text-align: center;
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 100px;
+
+    .grid-edge-left {
+        position: fixed;
+        min-height: 100%;
+        left: 7.5%;
+    }
+
+    .grid-edge-right {
+        position: fixed;
+        min-height: 100%;
+        right: 6%;
+    }
+
+    .grid-mid {
+        grid-column: 2 / span 4;
+    }
+}
+
+.top-page-nav {
+    margin-bottom: 40px;
+    background: linear-gradient(black, $gray-accent);
+    padding: $head-and-foot-padding;
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / span 6 !important;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        list-style-type: none;
+
+        li {
+
+            a {
+                text-decoration: none;
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #fff;
+                padding: 0 30px;
+                letter-spacing: .15em;
+                transition: all .3s;
+
+                &:hover {
+                    color: skyblue;
+                }
+            }
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+        margin-bottom: 30px;
+        box-shadow: 1px 1px 7px 0px #C0C0C0;
+        border-radius: 8px;
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            top: 4px;
+            box-shadow: none;
+        }
+    }
+}
+
+.home-page-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    ul {
+        list-style-type: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            transition: all .3s;
+            margin-bottom: 10px;
+            letter-spacing: .05em;
+
+            &:hover .circle {
+                // background: lightblue;
+                border-radius: 10px;
+            }
+
+            .circle {
+                margin-right: 10px;
+                font-size: 14px;
+                transition: all .3s;
+            }
+
+            #home-icon {
+                font-size: 17px;
+                margin-left: -2px;
+            }
+
+            p {
+                // font-weight: bold;
+                color: black;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    @include addSectionBoxShadow;
+
+    img {
+        width: 100%;
+        // @include addSectionBoxShadow;
+    }
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    // &-img {
+    //     width: 100%;
+    //     height: 500px;
+    //     background: black;
+    //     margin-right: 50px;
+    // }
+
+    .profile-details {
+
+        &-name {
+            font-size: 1.75rem;
+            // margin-bottom: 10px;
+        }
+
+        &-title {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+        }
+
+        &-desc {
+            line-height: 1.5em;
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
+        }
+
+        &-btns > button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+            background: #fff;
+            font-weight: bold;
+            letter-spacing: .05em;
+            transition: all .3s;
+
+            &:hover {
+                cursor: pointer;
+                background: $gray-accent;
+                color: #fff;
+            }
+        }
+
+        &-contact {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 30px;
+                }
+            }
+
+            [class="material-symbols-outlined"] {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.about-me-resources {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-section-desc {
+    margin-bottom: 50px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    
+    .project {
+        display: flex;
+        flex-direction: column;
+        // text-align: center;
+        margin-bottom: 50px;
+
+        &-img {
+            width: 80%;
+            height: 150px;
+            background: black;
+            margin: 0px auto 20px auto;
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.exp-and-skills {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0 -75px;
+
+    .edu-title, .skill-title {
+        text-align: center;
+    }
+
+    .edu-title {
+        padding-bottom: 15px;
+    }
+
+    .work-experience {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .card {
+            border: 1px solid $gray-accent;
+            border-radius: 8px;
+            position: relative;
+
+            &-header {
+                font-size: 18px;
+                border-bottom: 1px solid $gray-accent;
+                font-weight: bold;
+                background: $gray-accent;
+                color: #fff;
+                border-radius: 5px 5px 0px 0px;
+
+                p {
+                    padding: 5px 15px;
+                }
+            }
+
+            &-body {
+                padding: 10px 15px;
+            }
+
+            &-company-name {
+                font-weight: bold;
+            }
+
+            &-work-dates {
+                font-size: 14px;
+                font-style: italic;
+                margin-bottom: 15px;
+            }
+
+            &-responsibilities {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .skill-display {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-right: 15px;
+
+        .skill {
+            text-align: center;
+
+            & > img {
+                width: 60%;
+            }
+
+            .skill-title {
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.view-projects-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background: #fff;
+    font-weight: bold;
+    letter-spacing: .05em;
+    transition: all .3s;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+        cursor: pointer;
+        background: $gray-accent;
+        color: #fff;
+    }
+}
+
+.education {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -75px;
+
+    .edu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 30px;
+        margin: 0 auto;
+
+        &-title {
+            grid-column: 1 / span 3;
+            margin-bottom: 30px;
+        }
+    }
+
+    .school-listing {
+        margin-bottom: 50px;
+        // text-align: center;
+        line-height: 1.75em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .school-degree {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        .cap_icon {
+            margin-right: 10px;
+        }
+    }
+    
+    .school-name {
+        // display: flex;
+        // align-items: center;
+        font-size: 18px;
+    }
+    .school-major {
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    .school-graduation {
+        font-size: 14px;
+    }
+
+    .cap-icon {
+        margin-right: 5px;
+    }
+}
+
+.left-corner-decoration {
+    width: 0;
+	height: 0;
+	border-left: 150px solid #555;
+	border-bottom: 150px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right-corner-decoration {
+    width: 0;
+	height: 0;
+	border-right: 150px solid #555;
+	border-top: 150px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+

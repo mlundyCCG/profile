@@ -1,0 +1,77 @@
+@import "./variables";
+
+.project-section {
+    position: relative;
+    height: 90%;
+    margin: 0 278px 0 259px;
+    @include addSectionBoxShadow;
+    margin-bottom: 100px;
+
+    &-desc {
+        margin-bottom: 50px;
+    }
+    
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        
+        .project {
+            display: flex;
+            flex-direction: column;
+            // text-align: center;
+            margin-bottom: 25px;
+    
+            &-img {
+                width: 100%;
+                height: 200px;
+                background: black;
+                margin-bottom: 20px;
+            }
+
+            &-title {
+                font-weight: bold;
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .view-projects-btn {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid black;
+        background: #000;
+        font-weight: bold;
+        letter-spacing: .05em;
+        transition: all .3s;
+        display: block;
+        margin: 0 auto;
+
+        &:hover {
+            cursor: pointer;
+            background: $gray-accent;
+            color: #fff;
+        }
+    }
+}
+
+.left-corner-decoration {
+    width: 0;
+	height: 0;
+	border-left: 150px solid #555;
+	border-bottom: 150px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right-corner-decoration {
+    width: 0;
+	height: 0;
+	border-right: 150px solid #555;
+	border-top: 150px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}

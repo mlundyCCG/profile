@@ -1,0 +1,15 @@
+@import "./variables";
+
+.footer {
+    grid-column: 1 / span 6 !important;
+    background: linear-gradient(black, $gray-accent);
+    padding: $head-and-foot-padding;
+    width: 100%;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: .05em;
+    text-align: center;
+    margin-top: 54px;
+    position: relative;
+}

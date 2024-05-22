@@ -1,0 +1,15 @@
+$tan: #E8D9C5;
+$gray-accent: #555555;
+$head-and-foot-padding: 15px;
+
+@mixin addSectionBoxShadow {
+    box-shadow: 0px 0px 10px black;
+}
+
+@mixin centerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+}
